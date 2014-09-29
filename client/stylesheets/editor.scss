@@ -1,6 +1,5 @@
 .postEditor, .previewDisplay {
   display: inline-block;
-  overflow-y: scroll;
 
   width: 100/9*3vw;
 
@@ -9,12 +8,15 @@
 
 .postEditor {
   margin: 0 100/9*1vw;
+  overflow-y: hidden;
 }
 
 .previewDisplay {
   float: right;
   margin-right: 100/9*1vw;
   padding-top: 100/9*0.25vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   &:first-child {
     margin-top: 0;
@@ -101,8 +103,12 @@ input, textarea {
   height: 100/9*6vh;
 }
 
-.previewContent > p {
+.previewContent * {
   font-size: 1vw;
+}
+
+.previewContent:first-child {
+  margin-top: 0;
 }
 
 input[type="submit"], input[type="reset"] {

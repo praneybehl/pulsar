@@ -1,0 +1,38 @@
+<template name="GlobalMenu">
+  <li><a href="/">Home</a></li>
+  <li><a href="/posts">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/contact">Contact</a></li>
+</template>
+
+<template name="HomeMenu">
+  <nav>
+    {{> GlobalMenu}}
+  </nav>
+</template>
+
+<template name="PostListMenu">
+  <nav>
+    {{> GlobalMenu}}
+  </nav>
+</template>
+
+<template name="PostDisplayMenu">
+  <nav>
+    {{> GlobalMenu}}
+    <br/>
+    <li><a href="/posts">Back</a></li>
+  </nav>
+</template>
+
+<template name="PostEditMenu">
+  <nav>
+    {{> GlobalMenu}}
+    <br/>
+    <li><input type="submit" form="postEditForm" value="Publish"/></li>
+    <li>Save</li>
+    <br/>
+    <li><input type="reset" form="postEditForm" value="Cancel"/></li>
+  </nav>
+</template>

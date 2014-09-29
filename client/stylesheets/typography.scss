@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, p, ul, ol, li, code, pre, nav, label, time, textarea {
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, code, pre, nav, label, time, textarea, tex {
   font-size-adjust: auto;
   line-height: 1.414;
 
@@ -9,8 +9,6 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, code, pre, nav, label, time, textarea {
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1, 'lnum' 1;
-
-  margin-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,14 +24,46 @@ h1 {
   margin-bottom: 100/9*1vh;
 }
 
-p, ul, ol, li, code, pre, label, time {
+p, ul, ol, li, code, pre, label, time, tex {
   font-family: 'Muli', sans-serif;
+  font-size: 1.414vw;
 
   color: #c7cccd;
 }
 
-p {
-  font-size: 1.414vw;
+p > a[href] {
+  color: #7f8c8d;
+}
+
+tex {
+  color: #c7cccd;
+}
+
+pre, code {
+  font-family: 'Inconsolata', monospace;
+}
+
+pre {
+  margin-left: -100/9*0.25vh;
+  margin-right: -100/9*0.25vh;
+  padding: 100/9*0.25vh;
+  border: 0.1vw solid #c7cccd;
+  border-radius: 0.707vw;
+  white-space: pre-wrap;
+  line-height: 1;
+}
+
+pre code {
+  line-height: 1;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+blockquote p {
+  font-family: 'Ovo', serif;
+  font-size: 1.999vw;
 }
 
 label {
@@ -42,5 +72,6 @@ label {
 
 textarea {
   font-family: 'Inconsolata', monospace;
+
   color: #c7cccd;
 }

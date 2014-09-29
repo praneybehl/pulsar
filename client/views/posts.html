@@ -1,4 +1,5 @@
 <template name="PostListTemplate">
+{{> PostListMenu}}
 <div class="postListContainer">
   <ul class="postList">
   {{#each posts}}
@@ -12,6 +13,7 @@
 </template>
 
 <template name="PostDisplayTemplate">
+{{> PostDisplayMenu}}
 <main class="postContainer">
 <h1 class="postTitle">{{title}}</h1>
 <article>
@@ -21,6 +23,7 @@
 </template>
 
 <template name="PostEditTemplate">
+{{> PostEditMenu}}
 <div class="postEditor">
   <form id="postEditForm">
     <label for="editorTitle" class="editorTitle--label">Title</label>
@@ -30,8 +33,6 @@
       <time class="editorDate">{{mostRelevantDate}}</time>
     </span>
     <textarea id="editorContent" class="editorContent" placeholder="Valar Morghulis. Valar Dohaeris." autofocus required>{{rawContent}}</textarea>
-    <!-- <input type="submit" value="Create Post" />
-    <input type="reset" value="Cancel" /> -->
   </form>
 </div>
 <div class="previewDisplay">
@@ -42,7 +43,15 @@
 </template>
 
 <template name="PostAdminTemplate">
-  {{#each posts}}
-    <li><a href="{{pathFor route='post.show'}}">{{title}}</a></li>
-  {{/each}}
+  {{> PostListMenu}}
+  <div class="postListContainer">
+    <ul class="postList">
+    {{#each posts}}
+      <li class="postListItem">
+        <time>{{humanizeDate createdAt}}</time>
+        <a href="{{pathFor route='post.show'}}">{{title}}</a>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
 </template>

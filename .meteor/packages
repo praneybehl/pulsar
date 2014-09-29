@@ -13,14 +13,11 @@ browser-policy
 iron:router@1.0.0-pre2
 mandrill:ace
 meteor-platform
-meteorhacks:subs-manager
 npm-container
 oauth-encryption
 pcel:messenger
-raix:handlebar-helpers
-sashko:katex
 sewdn:velocityjs
 chuangbo:marked
 fourseven:scss
 mrt:moment
-
+sashko:katex
