@@ -1,0 +1,15 @@
+$offset: 0.75px;
+$text-stroke: 1px;
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    background-image: linear-gradient(to top, transparent, transparent $offset, currentColor $offset, currentColor $offset + $text-stroke, transparent $offset + $text-stroke);
+    text-shadow: -$text-stroke -$text-stroke 0 #2c3e50, $text-stroke -$text-stroke 0 #2c3e50, -$text-stroke $text-stroke 0 #2c3e50, $text-stroke $text-stroke 0 #2c3e50;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dppx) {
+      background-image: linear-gradient(to top, transparent, transparent 1.5 * $offset, currentColor 1.5 * $offset, currentColor 1.5 * $offset + $text-stroke / 2, transparent 1.5 * $offset + $text-stroke / 2);
+    }
+  }
+}

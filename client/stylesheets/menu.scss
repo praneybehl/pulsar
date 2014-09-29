@@ -1,0 +1,16 @@
+nav {
+  position: fixed;
+  top: 100/9*.25vw;
+  left: 100/9*.25vw;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 1vw;
+}
+
+nav > li {
+  color: #8D9B9C;
+  font-size: 1vw;
+}

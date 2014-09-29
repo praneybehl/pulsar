@@ -1,0 +1,48 @@
+<template name="PostListTemplate">
+<div class="postListContainer">
+  <ul class="postList">
+  {{#each posts}}
+    <li class="postListItem">
+      <time>{{humanizeDate createdAt}}</time>
+      <a href="{{pathFor route='post.show'}}">{{title}}</a>
+    </li>
+  {{/each}}
+  </ul>
+</div>
+</template>
+
+<template name="PostDisplayTemplate">
+<main class="postContainer">
+<h1 class="postTitle">{{title}}</h1>
+<article>
+  {{{htmlContent}}}
+</article>
+</main>
+</template>
+
+<template name="PostEditTemplate">
+<div class="postEditor">
+  <form id="postEditForm">
+    <label for="editorTitle" class="editorTitle--label">Title</label>
+    <input type="text" id="editorTitle" class="editorTitle" value={{title}} placeholder="Post Title" required />
+    <span class="postDivider">
+      <p class="editorPublishStatus"><span class="statusDraft">Draft</span> / <span class="statusFinal statusSelected">Final</span></p>
+      <time class="editorDate">{{mostRelevantDate}}</time>
+    </span>
+    <textarea id="editorContent" class="editorContent" placeholder="Valar Morghulis. Valar Dohaeris." autofocus required>{{rawContent}}</textarea>
+    <!-- <input type="submit" value="Create Post" />
+    <input type="reset" value="Cancel" /> -->
+  </form>
+</div>
+<div class="previewDisplay">
+  <article id="previewContent" class="previewContent">
+    {{editorContent}}
+  </article>
+</div>
+</template>
+
+<template name="PostAdminTemplate">
+  {{#each posts}}
+    <li><a href="{{pathFor route='post.show'}}">{{title}}</a></li>
+  {{/each}}
+</template>

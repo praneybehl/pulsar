@@ -1,0 +1,46 @@
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, code, pre, nav, label, time, textarea {
+  font-size-adjust: auto;
+  line-height: 1.414;
+
+  -webkit-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1, 'lnum' 1;
+
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ovo', serif;
+
+  color: #9ad1d6;
+}
+
+h1 {
+  font-size: 2.827vw;
+
+  margin-top: 0;
+  margin-bottom: 100/9*1vh;
+}
+
+p, ul, ol, li, code, pre, label, time {
+  font-family: 'Muli', sans-serif;
+
+  color: #c7cccd;
+}
+
+p {
+  font-size: 1.414vw;
+}
+
+label {
+  font-size: 1vw;
+}
+
+textarea {
+  font-family: 'Inconsolata', monospace;
+  color: #c7cccd;
+}
