@@ -1,8 +1,13 @@
+accounts-base@1.1.1
+accounts-github@1.0.1
+accounts-oauth@1.1.1
+alanning:roles@1.2.13
 aldeed:collection2@2.1.0
 aldeed:simple-schema@1.0.3
 application-configuration@1.0.2
 arunoda:find-faster@0.1.3
 autoupdate@1.1.1
+awatson1978:mousetrap@1.5.2
 base64@1.0.0
 binary-heap@1.0.0
 blaze-tools@1.0.0
@@ -25,6 +30,7 @@ fastclick@1.0.0
 follower-livedata@1.0.1
 fourseven:scss@0.9.5
 geojson-utils@1.0.0
+github@1.1.0
 html-tools@1.0.1
 htmljs@1.0.1
 http@1.0.6
@@ -41,6 +47,7 @@ jquery@1.0.0
 json@1.0.0
 kenlimmj:hljs@1.0.0
 livedata@1.0.10
+localstorage@1.0.0
 logging@1.0.3
 mandrill:ace@1.0.2
 meteor-platform@1.1.1
@@ -54,6 +61,8 @@ mrt:moment@2.8.1
 npm-container@1.0.0
 npm-node-aes-gcm@0.1.3
 oauth-encryption@1.0.0
+oauth2@1.1.0
+oauth@1.1.0
 observe-sequence@1.0.2
 ordered-dict@1.0.0
 pcel:messenger@1.4.2
@@ -64,6 +73,7 @@ reload@1.1.0
 retry@1.0.0
 routepolicy@1.0.1
 sashko:katex@1.0.2
+service-configuration@1.0.1
 session@1.0.2
 sewdn:velocityjs@0.8.0
 spacebars-compiler@1.0.2

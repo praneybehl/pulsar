@@ -11,14 +11,14 @@ Meteor.publish("allPosts", function(limit) {
     });
 });
 
-Meteor.publish("adminPosts", function() {
-    return Posts.find({});
-});
-
 Meteor.publish("singlePost", function(slug) {
     check(slug, String);
 
     return Posts.find({
         slug: slug
+    }, {
+        fields: {
+            contentHistory: 0
+        }
     });
 });

@@ -17,6 +17,29 @@ Template.PostEditTemplate.events({
             }
         });
     },
+    'click #postDelete': function(e) {
+        e.preventDefault();
+
+        var currentPost = Posts.findOneFaster();
+
+        Meteor.call('deletePostById', currentPost._id, function(error, result) {
+           if (!error && result) {
+                Messenger().post({
+                    message: "Post '" + currentPost.title + "' successfully deleted.",
+                    type: "success",
+                    hideOnNavigate: true
+                });
+
+                Router.go('post.list');
+           } else {
+                Messenger().post({
+                    message: "This is a horribly unhelpful message telling you something went wrong. Between the two of us, you're the human, so go fix it.",
+                    type: "error",
+                    hideOnNavigate: true
+                });
+           }
+        });
+    },
     'submit #postEditForm': function(e) {
         e.preventDefault();
 

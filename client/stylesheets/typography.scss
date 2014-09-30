@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, p, ul, ol, li, code, pre, nav, label, time, textarea, tex, input, button {
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, code, pre, nav, label, time, textarea, tex, input, button, blockquote {
   font-size-adjust: auto;
   line-height: 1.414;
 
@@ -22,6 +22,10 @@ h1 {
 
   margin-top: 0;
   margin-bottom: 100/9*1vh;
+}
+
+.postTitle {
+  text-align: center;
 }
 
 h2 {
@@ -65,6 +69,7 @@ pre code {
 ul, ol {
   padding: 0;
 }
+
 
 blockquote p {
   font-family: 'Ovo', serif;

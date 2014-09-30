@@ -15,8 +15,10 @@
 <template name="PostListMenu">
   <nav>
     {{> GlobalMenu}}
+    {{#if isInRole 'admin'}}
     <br/>
     <li><a href="/posts/new" class="createButton">Create</a></li>
+    {{/if}}
   </nav>
 </template>
 
@@ -25,17 +27,21 @@
     {{> GlobalMenu}}
     <br/>
     <li><a href="/posts" class="backButton">Back</a></li>
+    {{#if isInRole 'admin'}}
     <li><a href="{{pathFor route='post.edit'}}" class="editButton">Edit</a></li>
+    {{/if}}
   </nav>
 </template>
 
 <template name="PostEditMenu">
   <nav>
     {{> GlobalMenu}}
+    {{#if isInRole 'admin'}}
     <br/>
     <li><input type="submit" form="postEditForm" value="Publish"/></li>
     <li><input type="reset" form="postEditForm" value="Cancel"/></li>
     <br/>
     <li><button id="postDelete" class="deleteButton">Delete</button></li>
+    {{/if}}
   </nav>
 </template>
