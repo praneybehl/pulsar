@@ -1,0 +1,13 @@
+<template name="PostListTemplate">
+  {{> PostListMenu}}
+  <div class="postListContainer">
+    <ul class="postList">
+    {{#each posts}}
+      <li class="postListItem">
+        <time class="postListTime" datetime="{{createdAt}}">{{humanizeDate createdAt}}</time>
+        <h1 class="postListTitle"><a href="{{pathFor route='post.show'}}">{{title}}</a></h1>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</template>

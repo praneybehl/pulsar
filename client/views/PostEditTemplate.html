@@ -1,0 +1,19 @@
+<template name="PostEditTemplate">
+{{> PostEditMenu}}
+<div class="postEditor">
+  <form id="postEditForm">
+    <label for="editorTitle" class="editorTitle--label">Title</label>
+    <input type="text" id="editorTitle" class="editorTitle" value={{title}} placeholder="Post Title" required />
+    <span class="postDivider">
+      <p class="editorPublishStatus"><span class="statusDraft">Draft</span> / <span class="statusFinal statusSelected">Final</span></p>
+      <time class="editorDate">{{mostRelevantDate}}</time>
+    </span>
+    <textarea id="editorContent" class="editorContent" placeholder="Valar Morghulis. Valar Dohaeris." autofocus required>{{rawContent}}</textarea>
+  </form>
+</div>
+<div class="previewDisplay">
+  <article id="previewContent" class="previewContent">
+    {{editorContent}}
+  </article>
+</div>
+</template>

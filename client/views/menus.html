@@ -15,6 +15,8 @@
 <template name="PostListMenu">
   <nav>
     {{> GlobalMenu}}
+    <br/>
+    <li><a href="/posts/new" class="createButton">Create</a></li>
   </nav>
 </template>
 
@@ -22,7 +24,8 @@
   <nav>
     {{> GlobalMenu}}
     <br/>
-    <li><a href="/posts">Back</a></li>
+    <li><a href="/posts" class="backButton">Back</a></li>
+    <li><a href="{{pathFor route='post.edit'}}" class="editButton">Edit</a></li>
   </nav>
 </template>
 
@@ -31,8 +34,8 @@
     {{> GlobalMenu}}
     <br/>
     <li><input type="submit" form="postEditForm" value="Publish"/></li>
-    <li>Save</li>
-    <br/>
     <li><input type="reset" form="postEditForm" value="Cancel"/></li>
+    <br/>
+    <li><button id="postDelete" class="deleteButton">Delete</button></li>
   </nav>
 </template>

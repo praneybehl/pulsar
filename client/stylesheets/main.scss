@@ -17,42 +17,32 @@ body {
 }
 
 .postList {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .postListItem {
-  padding-top: 100/9*0.5vh;
-  margin-bottom: 100/9*0.5vh;
   height: 100/9*1vh;
-  @extend %font-fix;
-  font-family: 'Ovo', 'serif';
+  margin-bottom: 100/9*.5vh;
+  padding-top: 100/9*.5vh;
+}
 
-  & > time {
-    line-height: 1.618;
-    display: block;
-    color: #7f8c8d;
-    font-size: 1em;
-  }
+.postListTime {
+  font-size: 1vw;
 
-  & > a[href] {
-    line-height: 1.618;
-    font-size: 1.618em;
-    color: #bdc3c7;
+  color: #7f8c8d;
+}
 
-    &:hover {
-      background-image: linear-gradient(to top, transparent, transparent .75px, #bdc3c7 .75px, #bdc3c7 .75px + 1px, transparent .75px + 1px);
-      text-shadow: -1px -1px 0 #2c3e50, 1px -1px 0 #2c3e50, -1px 1px 0 #2c3e50, 1px 1px 0 #2c3e50;
-      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dppx) {
-        background-image: linear-gradient(to top, transparent, transparent 1.5 * .75px, #bdc3c7 1.5 * .75px, #bdc3c7 1.5 * .75px + 1px / 2, transparent 1.5 * .75px + 1px / 2);
-      }
-    }
-  }
+.postListTitle {
+  font-size: 1.999vw;
+
+  color: #bdc3c7;
 }
 
 .postContainer {
-  margin-left: 100/9*2vw;
-  margin-top: 100/9*1vh;
   width: 100/9*5vw;
+  margin-top: 100/9*1vh;
+  margin-left: 100/9*2vw;
 }

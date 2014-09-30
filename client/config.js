@@ -1,6 +1,7 @@
 Meteor.startup(function() {
     Messenger.options = {
-        extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right'
+        extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
+        theme: 'flat'
     }
 
     window.marked.setOptions({
