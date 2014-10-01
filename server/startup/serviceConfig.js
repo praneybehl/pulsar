@@ -4,7 +4,7 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'github',
-    clientId: Meteor.settings.GITHUB_CLIENTID,
-    secret: Meteor.settings.GITHUB_SECRET
+    clientId: Meteor.settings.github.CLIENTID,
+    secret: Meteor.settings.github.SECRET
 });
 

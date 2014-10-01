@@ -1,4 +1,4 @@
-var authUser = Meteor.settings.AUTHGITHUBUSER,
+var authUser = Meteor.settings.github.AUTHUSERS[0],
     authUserId = Meteor.users.findOneFaster({
         'services.github.username': authUser
     })._id;

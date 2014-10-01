@@ -5,11 +5,11 @@ Meteor.methods({
             $set: postDataObject
           });
 
-          return slug(postDataObject.title);
+          return URLify2(postDataObject.title);
         } else {
           Posts.insert(postDataObject);
 
-          return slug(postDataObject.title);
+          return URLify2(postDataObject.title);
         }
     },
     'deletePostById': function(id) {

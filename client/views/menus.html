@@ -38,8 +38,8 @@
     {{> GlobalMenu}}
     {{#if isInRole 'admin'}}
     <br/>
-    <li><input type="submit" form="postEditForm" value="Publish"/></li>
-    <li><input type="reset" form="postEditForm" value="Cancel"/></li>
+    <li><input type="submit" id="postSubmit" form="postEditForm" value="Publish"/></li>
+    <li><input type="reset" id="postCancel" form="postEditForm" value="Cancel"/></li>
     <br/>
     <li><button id="postDelete" class="deleteButton">Delete</button></li>
     {{/if}}

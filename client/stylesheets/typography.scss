@@ -53,8 +53,7 @@ pre, code {
 }
 
 pre {
-  margin-left: -100/9*0.25vh;
-  margin-right: -100/9*0.25vh;
+  margin: 0 -100/9*0.25vh;
   padding: 100/9*0.25vh;
   border: 0.1vw solid #c7cccd;
   border-radius: 0.707vw;

@@ -9,6 +9,8 @@
   overflow-y: hidden;
 
   margin: 0 100/9*1vw;
+
+  float: left;
 }
 
 .previewDisplay {
@@ -17,10 +19,12 @@
   overflow-y: scroll;
 
   margin-right: 100/9*1vw;
-  padding-top: 100/9*.25vw;
-  &:first-child {
-    margin-top: 0;
+  padding: 100/9*0.25vh;
 }
+
+.previewDisplay pre {
+  padding: 100/9*0.2vh;
+  margin: 0 -100/9*0.2vh;
 }
 
 .editorTitle--label {
@@ -107,7 +111,7 @@ input, textarea, button {
   font-size: 1vw;
 }
 
-.previewContent:first-child {
+.previewContent > :first-child {
   margin-top: 0;
 }
 

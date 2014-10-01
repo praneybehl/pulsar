@@ -11,9 +11,7 @@ aldeed:simple-schema
 arunoda:find-faster
 browser-policy
 iron:router@1.0.0-pre2
-mandrill:ace
 meteor-platform
-npm-container
 oauth-encryption
 pcel:messenger
 sewdn:velocityjs
@@ -26,4 +24,4 @@ accounts-github
 alanning:roles
 service-configuration
 awatson1978:mousetrap
-
+altapp:urlify2-minifiable

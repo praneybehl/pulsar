@@ -69,20 +69,23 @@ Template.PostEditTemplate.events({
                     Messenger().post({
                         message: "New post '" + postData.title + "' created.",
                         type: "success",
-                        hideOnNavigate: true
+                        hideOnNavigate: true,
+                        showCloseButton: true
                     });
                 } else if (postType === "Update") {
                     Messenger().post({
                         message: "Existing post '" + postData.title + "' updated.",
                         type: "success",
-                        hideOnNavigate: true
+                        hideOnNavigate: true,
+                        showCloseButton: true
                     });
                 }
             } else {
                 Messenger().post({
                     message: "This is a horribly unhelpful message telling you something went wrong. Between the two of us, you're the human, so go fix it.",
                     type: "error",
-                    hideOnNavigate: true
+                    hideOnNavigate: true,
+                    showCloseButton: true
                 });
             }
         });
@@ -90,7 +93,23 @@ Template.PostEditTemplate.events({
     'reset #postEditForm': function(e) {
         e.preventDefault();
 
-        Router.go('post.list');
+        Router.go('post.show', {
+            slug: this.slug
+        });
+    },
+    'click .statusDraft': function(e) {
+        e.preventDefault();
+
+        $('.statusDraft').addClass('statusSelected');
+        $('.statusFinal').removeClass('statusSelected');
+        $('#postSubmit').val('Save');
+    },
+    'click .statusFinal': function(e) {
+        e.preventDefault();
+
+        $('.statusFinal').addClass('statusSelected');
+        $('.statusDraft').removeClass('statusSelected');
+        $('#postSubmit').val('Publish');
     }
 });
 
